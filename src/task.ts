@@ -31,7 +31,7 @@ export const categoryTree = async (): Promise<CategoryListElement[]> => {
     }
     const l2Kids = c1.children
       ? c1.children.map((c2) => {
-          let order2 = c1.Title;
+          let order2 = c2.Title;
           if (c2.Title && c2.Title.includes('#')) {
             order2 = c2.Title.split('#')[0];
           }
@@ -41,7 +41,7 @@ export const categoryTree = async (): Promise<CategoryListElement[]> => {
           }
           const l3Kids = c2.children
             ? c2.children.map((c3) => {
-                let order3 = c1.Title;
+                let order3 = c3.Title;
                 if (c3.Title && c3.Title.includes('#')) {
                   order3 = c3.Title.split('#')[0];
                 }
